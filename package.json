@@ -1,0 +1,26 @@
+{
+  "name": "2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elPepeSech777/tp10_dai.git"
+  },
+  "author": "dante y felipe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elPepeSech777/tp10_dai/issues"
+  },
+  "homepage": "https://github.com/elPepeSech777/tp10_dai#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "http-status-codes": "^2.3.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0"
+  }
+}
