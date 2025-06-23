@@ -19,7 +19,6 @@ client.connect();
 
 // Acá abajo poner todos los EndPoints
 
-// GET todos los alumnos
 app.get('/api/alumnos', async (req, res) => {
     try {
         const result = await client.query('SELECT * FROM alumnos');
@@ -29,7 +28,6 @@ app.get('/api/alumnos', async (req, res) => {
     }
 });
 
-// GET alumno por ID
 app.get('/api/alumnos/:id', async (req, res) => {
     const id = req.params.id;
     if (isNaN(id)) return res.status(400).send("ID inválido");
@@ -43,7 +41,6 @@ app.get('/api/alumnos/:id', async (req, res) => {
     }
 });
 
-// POST nuevo alumno
 app.post('/api/alumnos', async (req, res) => {
     const { nombre, apellido, id_curso, fecha_nacimiento, hace_deportes } = req.body;
     if (!nombre || nombre.length < 3) return res.status(400).send("Nombre inválido");
@@ -59,7 +56,6 @@ app.post('/api/alumnos', async (req, res) => {
     }
 });
 
-// PUT actualizar alumno
 app.put('/api/alumnos', async (req, res) => {
     const { id, nombre, apellido, id_curso, fecha_nacimiento, hace_deportes } = req.body;
     if (!nombre || nombre.length < 3) return res.status(400).send("Nombre inválido");
@@ -76,7 +72,6 @@ app.put('/api/alumnos', async (req, res) => {
     }
 });
 
-// DELETE alumno
 app.delete('/api/alumnos/:id', async (req, res) => {
     const id = req.params.id;
     if (isNaN(id)) return res.status(400).send("ID inválido");
