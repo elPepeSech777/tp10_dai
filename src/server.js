@@ -8,7 +8,7 @@ const { Client } = pkg;
 const client = new Client(config);
 
 const app = express();
-const port = 3000;
+const port = 5432;
 
 // Agrego los Middlewares
 app.use(cors());         // Middleware de CORS
