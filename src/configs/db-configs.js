@@ -7,5 +7,5 @@ const DBConfig = {
 
 }
 
-export default config;
+export default DBConfig;
   
